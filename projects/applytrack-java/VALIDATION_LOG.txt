@@ -1,0 +1,34 @@
+$ java -jar <project-root>/applytrack-java/applytrack.jar --data <temporary-directory>/applications.csv add Demo Company Java Intern 2026-11-18 2026-11-24 Practice
+Added application #1 for Demo Company
+
+$ java -jar <project-root>/applytrack-java/applytrack.jar --data <temporary-directory>/applications.csv update 1 INTERVIEW 2026-11-24 Ready for interview
+Updated application #1
+
+$ java -jar <project-root>/applytrack-java/applytrack.jar --data <temporary-directory>/applications.csv list
+ID | COMPANY | ROLE | STATUS | APPLIED | FOLLOW-UP | NOTES
+1 | Demo Company | Java Intern | INTERVIEW | 2026-11-18 | 2026-11-24 | Ready for interview
+1 application(s)
+
+$ java -jar <project-root>/applytrack-java/applytrack.jar --data <temporary-directory>/applications.csv due 2026-11-24
+ID | COMPANY | ROLE | STATUS | APPLIED | FOLLOW-UP | NOTES
+1 | Demo Company | Java Intern | INTERVIEW | 2026-11-18 | 2026-11-24 | Ready for interview
+1 application(s)
+
+$ java -jar <project-root>/applytrack-java/applytrack.jar --data <temporary-directory>/applications.csv due 2026-11-23
+ID | COMPANY | ROLE | STATUS | APPLIED | FOLLOW-UP | NOTES
+0 application(s)
+
+$ java -jar <project-root>/applytrack-java/applytrack.jar --data <temporary-directory>/applications.csv add Invalid Role 2026-11-18 2026-11-17
+Error: Follow-up cannot be before the application date
+
+$ java -jar <project-root>/applytrack-java/applytrack.jar --data <temporary-directory>/applications.csv list
+ID | COMPANY | ROLE | STATUS | APPLIED | FOLLOW-UP | NOTES
+1 | Demo Company | Java Intern | INTERVIEW | 2026-11-18 | 2026-11-24 | Ready for interview
+1 application(s)
+
+$ java -jar <project-root>/applytrack-java/applytrack.jar --data <temporary-directory>/applications.csv update 1 REJECTED - Closed
+Updated application #1
+
+$ java -jar <project-root>/applytrack-java/applytrack.jar --data <temporary-directory>/applications.csv due 2026-11-24
+ID | COMPANY | ROLE | STATUS | APPLIED | FOLLOW-UP | NOTES
+0 application(s)

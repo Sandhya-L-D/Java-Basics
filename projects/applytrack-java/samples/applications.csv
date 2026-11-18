@@ -1,0 +1,4 @@
+id,company,role,applied_on,status,follow_up_on,notes
+1,Example Software,Java Intern,2026-11-18,APPLIED,2026-11-21,Fictional sample
+2,Demo Analytics,QA Intern,2026-11-18,INTERVIEW,2026-11-24,Prepare project walkthrough
+3,Sample Systems,Developer Trainee,2026-11-18,REJECTED,2026-11-20,Closed sample

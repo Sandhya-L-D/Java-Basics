@@ -1,0 +1,18 @@
+$ java -jar authlog-analyzer.jar
+AuthLog Analyzer
+Valid events: 9
+Invalid rows skipped: 1
+Alerts: 2
+REPEATED_FAILURES | 192.0.2.10 | learner | failures=5 | 2026-11-18T09:02:00Z
+SUCCESS_AFTER_FAILURES | 192.0.2.10 | learner | failures=5 | 2026-11-18T09:02:30Z
+Report: <project-root>/authlog-analyzer-java/output/report.html
+
+$ java -jar authlog-analyzer.jar samples/login-events.csv <temporary-directory> 6 300
+AuthLog Analyzer
+Valid events: 9
+Invalid rows skipped: 1
+Alerts: 0
+Report: <temporary-directory>/report.html
+
+$ java -jar authlog-analyzer.jar samples/login-events.csv <temporary-directory> 1 300
+Error: Threshold must be >=2; window must be 1..86400 seconds
